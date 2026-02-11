@@ -1,0 +1,360 @@
+
+:root{
+  --bg:#fff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --accent:#18a7a0;
+  --sidebar:#b9b9b9;
+  --btn:#6f6f6f;
+  --btnHover:#5f5f5f;
+  --max:1100px;
+}
+*{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{
+  margin:0;
+  font-family:"Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo", sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.75;
+}
+.sf-shell{ max-width:var(--max); margin:0 auto; padding:0 12px 24px; }
+.sf-topline{ font-size:14px; padding:10px 0 6px; text-align:left; max-width:100%; }
+.sf-banner{ display:flex; justify-content:center; padding: 0 0 12px; }
+.sf-banner img{ width: 100%; max-width: 100%; height: auto; }
+
+.sf-layout{ display:grid; grid-template-columns: 165px 1fr; gap:14px; align-items:start; }
+.sf-sidebar{ background:var(--sidebar); border-radius:16px; padding:14px; position:sticky; top:12px; }
+.sf-sidebar ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px; }
+.sf-sidebar a{
+  display:block; width:100%;
+  background:var(--btn); color:#fff;
+  padding:14px 16px; border-radius:12px;
+  font-weight:700; letter-spacing:.04em;
+  text-decoration:none;
+}
+.sf-sidebar a:hover{ background:var(--btnHover); }
+
+.sf-main{ min-width:0; }
+.sf-card{
+  background:#fff; border:1px solid var(--line);
+  border-radius:14px; padding: 14px;
+  box-shadow:0 8px 22px rgba(0,0,0,.05);
+}
+
+/* Legacy content: keep as-is but make it center and responsive */
+.sf-card img, .sf-card video, .sf-card object, .sf-card embed{ max-width:100%; height:auto; }
+.sf-card video{ display:block; margin:0 auto; }
+.sf-card table{ max-width:100%; margin-left:auto; margin-right:auto; }
+.sf-card td[nowrap]{ white-space:normal; }
+.sf-card center{ display:block; text-align:center; }
+
+/* Make wide tables scroll on small screens (e.g., 職務経歴 table) */
+.sf-card .sf-table-wrap{ overflow:auto; -webkit-overflow-scrolling:touch; }
+
+.sf-footer{ text-align:center; color:var(--muted); font-size:13px; padding:18px 0 26px; }
+
+@media (max-width: 860px){
+  .sf-layout{ grid-template-columns:1fr; }
+  .sf-sidebar{ position:relative; top:0; }
+}
+
+/* Hero video (TOP) */
+.sf-hero-video{
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  background: #000;
+}
+
+/* Legacy section header images (e.g., Prof.gif, skill.gif) */
+.sf-card img[alt], .sf-card img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Wider layout for pages that need it (e.g., 職務経歴) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Option2 responsive readability (keep PC design) --- */
+.sf-card{
+  font-size: 16px;
+}
+
+/* Make long text wrap nicely */
+.sf-card{
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Ensure legacy tables never push layout; allow horizontal scroll when needed */
+.sf-card .sf-table-wrap,
+.sf-card table{
+  max-width: 100%;
+}
+.sf-card table{
+  margin-left: auto;
+  margin-right: auto;
+}
+/* If a table is wider than the card, allow scrolling without breaking layout */
+/* Images: always fit */
+.sf-card img, .sf-card video, .sf-card object, .sf-card embed{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve spacing for smaller screens */
+@media (max-width: 860px){
+  .sf-shell{ padding: 0 10px 18px; }
+  .sf-topline{ font-size: 13px; }
+  .sf-card{ padding: 12px; font-size: 16px; }
+  .sf-layout{ gap: 12px; }
+
+  /* Turn sidebar into a compact grid menu */
+  .sf-sidebar{
+    padding: 10px;
+    border-radius: 14px;
+  }
+  .sf-sidebar ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .sf-sidebar a{
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 12px;
+    font-size: 15px;
+    letter-spacing: .02em;
+  }
+}
+
+/* Very small screens: 1-column menu */
+@media (max-width: 520px){
+  .sf-sidebar ul{ grid-template-columns: 1fr; }
+}
+
+/* --- Keep content column centered (readable width) --- */
+.sf-card > *{
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Exceptions: hero/video and scrollable tables should use full available width */
+.sf-card .sf-hero,
+.sf-card .sf-hero-video,
+.sf-card .sf-table-wrap{
+  max-width: none;
+}
+
+/* Tables: keep table layout; scroll container handles overflow */
+.sf-card .sf-table-wrap{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.sf-card .sf-table-wrap table{
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Career page: make the table about 80% width inside the card (balanced) */
+.sf-career .sf-card{ padding: 14px; }
+.sf-career .sf-table-wrap{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.sf-career .sf-table-wrap table{
+  width: 80% !important;
+  margin: 0 auto;
+  max-width: 980px;
+}
+@media (max-width: 860px){
+  .sf-career .sf-table-wrap table{ width: 100% !important; }
+}
+
+/* Profile: align like other pages + prevent furigana wrap */
+.sf-profile .sf-card{ padding: 18px; }
+.sf-profile .sf-card > *{ text-align: left; }
+.sf-profile .sf-profile-table{
+  width: 100%;
+  margin: 0;
+  table-layout: fixed;
+}
+.sf-profile .sf-profile-table td:first-child{
+  width: 8em;
+  white-space: nowrap;
+}
+.sf-profile .sf-profile-table td:nth-child(2){
+  width: auto;
+  word-break: keep-all;
+}
+@media (max-width: 860px){
+  .sf-profile .sf-profile-table td:first-child{ width: 6.5em; }
+}
+
+
+/* --- v11 fixes --- */
+/* Center page banner/hero images (career page and others) */
+.sf-card .sf-page-banner,
+.sf-card .sf-hero{
+  text-align: center;
+}
+.sf-card .sf-page-banner img,
+.sf-card .sf-hero img{
+  display: block;
+  margin: 0 auto;
+}
+
+/* Profile: prevent furigana value wrapping; widen label/value gap */
+.sf-profile .sf-card td:first-child{
+  padding-right: 44px;   /* wider gap */
+  min-width: 140px;
+}
+/* Furigana row is the first row in the profile table */
+.sf-profile .sf-card table tr:first-child td:nth-child(2){
+  white-space: nowrap;
+}
+/* Keep other rows wrappable (address etc.) */
+.sf-profile .sf-card table tr:not(:first-child) td:nth-child(2){
+  white-space: normal;
+}
+
+/* --- v12 layout tweaks --- */
+/* Page title banner (e.g., Prof.gif, Keireki.gif): center and make consistent */
+.sf-card table.sf-page-title{
+  width: 100% !important;
+  border-collapse: collapse;
+}
+.sf-card table.sf-page-title td{
+  width: auto !important;
+}
+.sf-card table.sf-page-title img{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Profile: keep banner centered even though we center the content block */
+.sf-profile .sf-card table.sf-page-title{
+  max-width: none;
+}
+
+/* Profile: widen the value column by widening the whole profile table a bit */
+.sf-profile .sf-card table[width="596"]{
+  width: 86% !important;
+  max-width: 760px;
+  margin: 0 auto;
+}
+/* Label/value spacing */
+.sf-profile .sf-card td:first-child{
+  padding-right: 52px;   /* wider gap */
+  min-width: 150px;
+}
+/* Prevent wrapping for most value cells (furigana etc.) */
+.sf-profile .sf-card td:nth-child(2){
+  white-space: nowrap;
+}
+/* But allow wrapping for address value cell */
+.sf-profile .sf-card td.sf-wrap{
+  white-space: normal !important;
+}
+
+
+/* --- v13: unify banner + main width (except TOP) --- */
+
+/* Main content area width */
+.sf-card{
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Page banners (non-TOP) match main content width */
+.sf-card table.sf-page-title{
+  width: 92% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* --- v15: profile page aligns with other pages (only sub5.html) --- */
+body.sf-profile .sf-card table.sf-page-title{
+  width: 92% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+body.sf-profile .sf-card table.sf-page-title img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Profile details table fills the same content width */
+body.sf-profile .sf-card table.sf-profile-table{
+  width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+body.sf-profile .sf-card table.sf-profile-table td{
+  padding: 6px 8px;
+  vertical-align: top;
+}
+/* label/value ratio */
+body.sf-profile .sf-card table.sf-profile-table td:first-child{
+  width: 22%;
+  white-space: nowrap;
+}
+body.sf-profile .sf-card table.sf-profile-table td:last-child{
+  width: 78%;
+  word-break: keep-all;
+}
+
+/* --- Profile page alignment fix (v17) --- */
+body.sf-profile .sf-card table.sf-page-title{
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+}
+body.sf-profile .sf-card table.sf-page-title td:nth-child(2){
+  text-align: center;
+}
+body.sf-profile .sf-card table.sf-page-title img{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center and widen profile text block to match other pages' proportions */
+body.sf-profile .sf-profile-content{
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+}
+body.sf-profile table.sf-profile-table{
+  width: 100%;
+}
+body.sf-profile table.sf-profile-table td:first-child{
+  width: 18%;
+  white-space: nowrap;
+}
+body.sf-profile table.sf-profile-table td:last-child{
+  width: 82%;
+}
+
