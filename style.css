@@ -1,0 +1,282 @@
+/* SystemFinal 共通スタイル：旧式テーブル用・使用終了画像用の重複指定を整理 */
+:root {
+  --bg:#fff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --sidebar:#c6cdd5;
+  --menu:#586d85;
+  --menu-hover:#405b78;
+  --max:1100px;
+}
+* { box-sizing:border-box; }
+html { -webkit-text-size-adjust:100%; }
+body {
+  margin:0;
+  font-family:"Noto Sans JP",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.75;
+}
+.sf-shell { max-width:var(--max); margin:0 auto; padding:0 12px 24px; }
+.sf-topline { font-size:14px; padding:10px 0 6px; text-align:left; }
+.sf-layout {
+  display:grid;
+  grid-template-columns:165px minmax(0,1fr);
+  gap:14px;
+  align-items:start;
+}
+.sf-sidebar {
+  background:var(--sidebar);
+  border-radius:16px;
+  padding:14px;
+  position:sticky;
+  top:12px;
+}
+.sf-sidebar ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.sf-sidebar a {
+  display:block;
+  width:100%;
+  padding:14px 16px;
+  border-radius:12px;
+  background:var(--menu);
+  color:white;
+  font-size:16px;
+  font-weight:700;
+  line-height:1.75;
+  letter-spacing:.02em;
+  text-decoration:none;
+}
+.sf-sidebar a:hover, .sf-sidebar a[aria-current="page"] { background:var(--menu-hover); }
+.sf-sidebar a:focus-visible { outline:3px solid #2d73ae; outline-offset:2px; }
+.sf-main { min-width:0; }
+.sf-card {
+  width:92%;
+  max-width:100%;
+  margin:0 auto;
+  padding:14px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  box-shadow:0 8px 22px rgba(0,0,0,.05);
+  font-size:16px;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+.sf-card img, .sf-card video { max-width:100%; height:auto; }
+.sf-footer { text-align:center; color:var(--muted); font-size:13px; padding:18px 0 26px; }
+@media (max-width:860px) {
+  .sf-shell { padding:0 10px 18px; }
+  .sf-topline { font-size:13px; }
+  .sf-layout { grid-template-columns:minmax(0,1fr); gap:12px; }
+  .sf-sidebar { position:relative; top:0; padding:10px; border-radius:14px; }
+  .sf-sidebar ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .sf-sidebar a { padding:12px 10px; text-align:center; font-size:15px; }
+  .sf-card { padding:12px; }
+}
+@media (max-width:520px) {
+  .sf-sidebar ul { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+  .sf-sidebar a { padding:10px 5px; font-size:14px; white-space:nowrap; }
+}
+
+/* SystemFinal banner — 高さ95px / 横幅最大1040px、Outfit、青いウェーブ */
+.sf-banner {
+  display: block;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.sf-banner-inner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1040px;  /* ユーザー調整値 */
+  height: 95px;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 24px;
+  background: linear-gradient(105deg, #dcefff 0%, #c0e1fc 48%, #8ecafb 100%);
+}
+.sf-banner-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sf-banner-title {
+  display: block;
+  font-family: "Outfit", "Segoe UI", Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: .05px;
+  line-height: 1.1;
+  color: #143e76;
+  white-space: nowrap;
+}
+.sf-banner-subtitle {
+  font-family: "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .15em;
+  line-height: 1.1;
+  color: #37638d;
+}
+.sf-banner-waves {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 62%;
+  pointer-events: none;
+}
+@media (max-width: 520px) {
+  .sf-banner-inner { height: 58px; padding: 0 14px; }
+  .sf-banner-title { font-size: 26px; }
+  .sf-banner-subtitle { font-size: 9px; }
+  .sf-banner-waves { width: 50%; opacity: .75; }
+}
+
+
+/* お仕事の流れ：旧JobNagareZu.gifをHTML/CSSで再現（sub2.htmlのみ） */
+.sf-workflow-content {
+  /* ページ見出しと同じ左端・右端に揃える */
+  width: 92%;
+  max-width: 760px;
+  margin: 24px auto 0;
+  min-width: 0;
+}
+.sf-workflow-section-title {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 22px;
+  color: #243c53;
+}
+.sf-workflow-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  --workflow-label-width: 220px;
+  --workflow-column-gap: 26px;
+}
+.sf-workflow-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--workflow-label-width) minmax(0, 1fr);
+  gap: var(--workflow-column-gap);
+  align-items: center;
+  min-width: 0;
+  min-height: 52px;
+  margin: 0 0 36px;
+}
+.sf-workflow-step:last-child { margin-bottom: 0; }
+.sf-workflow-step__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 48px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 7px 10px;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 600;
+  color: #30445c;
+  box-shadow: 0 1px 0 rgba(35,61,87,.05);
+}
+.sf-workflow-step--customer .sf-workflow-step__name { background:#def8e3; border-color:#addab9; }
+.sf-workflow-step--engineer .sf-workflow-step__name { background:#e3e4ff; border-color:#bfc2ed; }
+.sf-workflow-step--complete .sf-workflow-step__name { background:#ffe1e2; border-color:#f2b5b9; }
+.sf-workflow-step__detail {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #34465a;
+  margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.sf-workflow-step__detail:empty { display: none; }
+/* すべてCSSで作った矢印。デスクトップでは作業名の下へ配置 */
+.sf-workflow-step:not(:last-child)::before,
+.sf-workflow-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: calc(var(--workflow-label-width) / 2);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.sf-workflow-step:not(:last-child)::before {
+  width: 13px;
+  height: 16px;
+  bottom: -20px;
+  background: #bcc8d3;
+}
+.sf-workflow-step:not(:last-child)::after {
+  width: 0;
+  height: 0;
+  bottom: -32px;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+  border-top: 15px solid #bcc8d3;
+}
+.sf-workflow-flag {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ce646d;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  margin-right: 9px;
+}
+.sf-workflow-legend { display:flex; flex-wrap:wrap; gap: 13px 24px; margin: 30px 0 28px; font-size: 13px; color:#4e5f70; }
+.sf-workflow-legend > span { display: inline-flex; align-items:center; gap: 8px; }
+.sf-workflow-legend__color { width: 25px; height: 14px; display:inline-block; border-radius:4px; border:1px solid; }
+.sf-workflow-legend__color--customer { background:#def8e3; border-color:#addab9; }
+.sf-workflow-legend__color--engineer { background:#e3e4ff; border-color:#bfc2ed; }
+.sf-workflow-fees { margin-top: 20px; }
+.sf-workflow-fees .sf-workflow-section-title { margin-bottom: 6px; }
+.sf-workflow-fees p { line-height: 1.8; margin: 0 0 10px; font-size: 15px; overflow-wrap:anywhere; }
+/* 携帯などの狭い画面では、各手順と説明を縦方向に配置 */
+@media (max-width: 620px) {
+  .sf-workflow-content { margin-top: 18px; }
+  .sf-workflow-steps { --workflow-label-width: 100%; }
+  .sf-workflow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    margin-bottom: 38px;
+    min-height: 0;
+  }
+  .sf-workflow-step__name { font-size: 14px; min-height: 43px; }
+  .sf-workflow-step__detail { font-size: 13px; line-height: 1.7; }
+  .sf-workflow-step:not(:last-child)::before,
+  .sf-workflow-step:not(:last-child)::after { left: 50%; }
+  .sf-workflow-step:not(:last-child)::before { bottom: -21px; }
+  .sf-workflow-step:not(:last-child)::after { bottom: -33px; }
+  .sf-workflow-legend { margin-top: 30px; gap: 10px 15px; }
+}
+
+@media (max-width: 600px) {
+  .sf-workflow-content { width: 100%; }
+}
+
+/* 旧ページURLからの案内（公開終了したパートナーページ） */
+.sf-retired-page { max-width:760px; margin:32px auto; padding:10px 15px; }
+.sf-retired-page h1 { font-size:20px; color:#2b455e; }

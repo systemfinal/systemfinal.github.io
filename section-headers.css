@@ -1,0 +1,84 @@
+/* 各ページの見出し：SystemFinal上部バナーとは異なる控えめなデザイン */
+.sf-section-heading {
+  width: 92%;
+  max-width: 760px;
+  min-height: 75px;
+  margin: 0 auto 16px;
+  padding: 6px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8ef;
+  border-left: 4px solid #708aa4;
+  border-radius: 12px;
+  background: linear-gradient(112deg, #f8fafc, #edf2f6);
+  text-align: left;
+}
+.sf-section-heading__text { z-index: 1; min-width: 0; }
+.sf-section-heading__en {
+  display: block;
+  font-family: 'Outfit', 'Segoe UI', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.20em;
+  color: #536d86;
+  line-height: 1.2;
+}
+.sf-section-heading__title {
+  font-family: 'Noto Sans JP', 'Yu Gothic', Meiryo, sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: .03em;
+  color: #2b455e;
+  margin: 5px 0;
+}
+.sf-section-heading__lead {
+  font-size: 10px;
+  line-height: 1.2;
+  margin: 0;
+  color: #687b8c;
+}
+/* 写真も強いロゴも使わず、薄い図形だけを配置 */
+.sf-section-heading__art {
+  flex: 0 0 95px;
+  height: 55px;
+  position: relative;
+  opacity: .83;
+  pointer-events: none;
+}
+.sf-section-heading__art::before {
+  content: '';
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  right: 18px;
+  top: 3px;
+  border: 2px solid #c8d5e0;
+  border-radius: 15px;
+  transform: rotate(17deg);
+}
+.sf-section-heading__art::after {
+  content: '';
+  width: 39px;
+  height: 39px;
+  position: absolute;
+  right: 37px;
+  top: 10px;
+  border-radius: 13px;
+  background: rgba(170,196,216,.25);
+  transform: rotate(-12deg);
+}
+@media (max-width: 600px) {
+  .sf-section-heading {
+    width: 100%;
+    min-height: 75px;
+    padding: 8px 14px;
+    margin-bottom: 16px;
+  }
+  .sf-section-heading__title { font-size: 21px; }
+  .sf-section-heading__art { display: none; }
+}

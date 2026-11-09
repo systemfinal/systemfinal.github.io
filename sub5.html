@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="favicon.ico" rel="icon"/>
+<title>プロフィール | システムファイナル</title>
+<meta content="フリーランスのシステムエンジニア、システムファイナルのプロフィールとこれまでの開発経験をご紹介します。" name="description"/>
+
+<link href="style.css" rel="stylesheet"/>
+<link href="section-headers.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+
+/* プロフィールページ専用。共通CSS・各ページ見出しの指定は変更しません。 */
+.sf-profile-page {
+  width: 92%;
+  max-width: 760px;
+  min-width: 0;
+  margin: 24px auto 30px;
+  color: #273647;
+}
+.sf-profile-page .sf-profile-intro {
+  font-size: 15px;
+  line-height: 1.95;
+  margin: 0 0 27px;
+}
+.sf-profile-page .sf-profile-section { margin: 0 0 28px; }
+.sf-profile-page .sf-profile-section-title {
+  margin: 0 0 15px;
+  padding-left: 12px;
+  border-left: 3px solid #708aa4;
+  color: #2b455e;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.sf-profile-page .sf-profile-info {
+  margin: 0;
+  border-top: 1px solid #e7ecf1;
+}
+.sf-profile-page .sf-profile-info-row {
+  display: grid;
+  grid-template-columns: minmax(0, 125px) minmax(0, 1fr);
+  gap: 14px;
+  padding: 13px 10px;
+  border-bottom: 1px solid #e7ecf1;
+  min-width: 0;
+}
+.sf-profile-page .sf-profile-info-row:nth-child(odd) { background: #f8fafc; }
+.sf-profile-page .sf-profile-info dt {
+  font-size: 14px;
+  font-weight: 600;
+  color: #46627d;
+}
+.sf-profile-page .sf-profile-info dd {
+  margin: 0;
+  min-width: 0;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+  line-height: 1.85;
+}
+.sf-profile-page .sf-profile-reference {
+  color: #526779;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 0;
+}
+.sf-profile-page a { color: #285d97; text-underline-offset: 3px; }
+@media (max-width: 600px) {
+  .sf-profile-page { width: 100%; margin-top: 22px; }
+  .sf-profile-page .sf-profile-intro { font-size: 14px; }
+  .sf-profile-page .sf-profile-info-row { grid-template-columns: minmax(0, 92px) minmax(0, 1fr); gap: 8px; padding: 12px 8px; }
+  .sf-profile-page .sf-profile-info dt,
+  .sf-profile-page .sf-profile-info dd { font-size: 13px; }
+}
+
+</style>
+</head>
+<body>
+<div class="sf-shell"> <div class="sf-topline">業務システムの設計・開発・改修・保守に対応しています。</div> <div class="sf-banner">
+<div class="sf-banner-inner">
+<div class="sf-banner-copy">
+<span class="sf-banner-title">SystemFinal</span>
+<span class="sf-banner-subtitle">システムファイナル</span>
+</div>
+<svg aria-hidden="true" class="sf-banner-waves" focusable="false" preserveaspectratio="none" viewbox="0 0 720 90">
+<path d="M0 100 C165 83 297 78 410 49 S608 9 720 -16 L720 90 L0 90 Z" fill="#7ec4f6" opacity=".65"></path>
+<path d="M120 100 C276 89 373 57 476 45 S644 16 720 2 L720 90 L120 90 Z" fill="#399ce3" opacity=".68"></path>
+<path d="M190 101 C352 84 455 52 575 43 S676 34 726 29" fill="none" opacity=".88" stroke="#f0f9ff" stroke-width="8"></path>
+<path d="M384 100 C506 76 584 60 720 48 L720 90 L384 90 Z" fill="#1c7dcb" opacity=".50"></path>
+</svg>
+</div>
+</div> <div class="sf-layout"> <aside class="sf-sidebar"> <nav id="menu1"> <ul> <li><a href="index.html">ＴＯＰ</a></li> <li><a href="sub1.html">事業内容</a></li> <li><a href="sub2.html">お仕事の流れ</a></li> <li><a href="sub3.html">スキル</a></li> <li><a href="sub4.html">職務経歴</a></li> <li><a aria-current="page" href="sub5.html">プロフィール</a></li> <li><a href="sub7.html">お問合せ</a></li> </ul> </nav> </aside> <main class="sf-main"> <div class="sf-card"> <header aria-labelledby="sf-section-title" class="sf-section-heading">
+<div class="sf-section-heading__text">
+<span class="sf-section-heading__en">PROFILE</span>
+<h1 class="sf-section-heading__title" id="sf-section-title">プロフィール</h1>
+<p class="sf-section-heading__lead">自己紹介</p>
+</div>
+<div aria-hidden="true" class="sf-section-heading__art"></div>
+</header>
+<div class="sf-profile-page">
+<section aria-labelledby="sf-profile-about-title" class="sf-profile-section">
+<h2 class="sf-profile-section-title" id="sf-profile-about-title">自己紹介</h2>
+<p class="sf-profile-intro">業務システムを中心に、設計・開発・改修・保守などの仕事に携わってきました。C#／.NETをはじめ、Webシステムやデータベースを利用した開発など、これまでの経験を活かして業務に取り組んでおります。</p>
+</section>
+<section aria-labelledby="sf-profile-basic-title" class="sf-profile-section">
+<h2 class="sf-profile-section-title" id="sf-profile-basic-title">基本情報</h2>
+<dl class="sf-profile-info">
+<div class="sf-profile-info-row"><dt>氏名</dt><dd>田村 健一（タムラ ケンイチ）</dd></div>
+<div class="sf-profile-info-row"><dt>職業</dt><dd>フリーランス システムエンジニア</dd></div>
+<div class="sf-profile-info-row"><dt>所在地</dt><dd>神奈川県川崎市中原区（最寄駅：<a href="https://www.google.co.jp/maps/place/%E5%85%83%E4%BD%8F%E5%90%89%E9%A7%85/@35.56432,139.654046,17z/data=!3m1!4b1!4m2!3m1!1s0x60185f8115c0f6ab:0xb9ba231f5765435c" rel="noopener noreferrer" target="_blank">東急東横線 元住吉駅</a>）</dd></div>
+<div class="sf-profile-info-row"><dt>資格</dt><dd>日商簿記3級</dd></div>
+<div class="sf-profile-info-row"><dt>趣味</dt><dd>スキー</dd></div>
+</dl>
+</section>
+<section aria-labelledby="sf-profile-history-title" class="sf-profile-section">
+<h2 class="sf-profile-section-title" id="sf-profile-history-title">開発経験について</h2>
+<p class="sf-profile-reference">対応技術やこれまで携わった業務については、<a href="sub3.html">スキル</a>と<a href="sub4.html">職務経歴</a>のページにまとめております。ご依頼やご相談は<a href="sub7.html">お問合せ</a>からご連絡ください。</p>
+</section>
+</div>
+</div> </main> </div> <div class="sf-footer">© 2026 SystemFinal. All rights reserved.</div>
+</div>
+</body>
+</html>

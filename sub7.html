@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="favicon.ico" rel="icon"/>
+<title>お問い合わせ | システムファイナル</title>
+<meta content="業務システムの新規開発、既存システムの改修・保守に関するご相談やお見積もりのご依頼はこちらから。" name="description"/>
+
+<link href="style.css" rel="stylesheet"/>
+<link href="section-headers.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+
+/* お問合せページ専用。Formspreeの送信先・name属性は元のままです。 */
+.sf-contact-page {
+  width: 92%;
+  max-width: 760px;
+  min-width: 0;
+  margin: 24px auto 32px;
+  color: #273647;
+}
+.sf-contact-page .sf-contact-intro { font-size: 15px; line-height: 1.95; margin: 0 0 22px; }
+.sf-contact-page .sf-contact-note { margin: 0 0 20px; font-size: 13px; color: #637588; line-height: 1.8; }
+.sf-contact-page .sf-contact-form {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px 25px;
+}
+.sf-contact-page .sf-contact-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 19px 18px;
+}
+.sf-contact-page .sf-contact-field { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.sf-contact-page .sf-contact-field--full { grid-column: 1 / -1; }
+.sf-contact-page .sf-contact-field label { font-size: 14px; font-weight: 600; color: #344f68; }
+.sf-contact-page .sf-contact-optional { margin-left: 7px; font-size: 11px; font-weight: 400; color: #64748b; }
+.sf-contact-page .sf-contact-required { margin-left: 7px; color: #9d4a4f; font-weight: 500; font-size: 11px; }
+.sf-contact-page .sf-contact-field input,
+.sf-contact-page .sf-contact-field textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  color: #25374b;
+  border: 1px solid #becbd8;
+  border-radius: 7px;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.65;
+  padding: 10px 12px;
+}
+.sf-contact-page .sf-contact-field textarea { min-height: 170px; resize: vertical; }
+.sf-contact-page .sf-contact-field input:focus,
+.sf-contact-page .sf-contact-field textarea:focus { outline: 2px solid #5b94cb; outline-offset: 1px; border-color: #5b94cb; }
+.sf-contact-page .sf-contact-help { color: #6b7b89; font-size: 12px; line-height: 1.7; }
+.sf-contact-page .sf-contact-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 22px; }
+.sf-contact-page .sf-contact-submit,
+.sf-contact-page .sf-contact-reset {
+  appearance: none;
+  min-height: 44px;
+  padding: 9px 25px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.sf-contact-page .sf-contact-submit { background: #586d85; color: white; border: 1px solid #586d85; }
+.sf-contact-page .sf-contact-submit:hover { background: #405b78; }
+.sf-contact-page .sf-contact-reset { background: transparent; color: #506479; border: 1px solid #c4d1db; }
+.sf-contact-page .sf-contact-reset:hover { background: #eaf0f6; }
+.sf-contact-page .sf-contact-submit:focus-visible,
+.sf-contact-page .sf-contact-reset:focus-visible { outline: 2px solid #245b93; outline-offset: 2px; }
+@media (max-width: 600px) {
+  .sf-contact-page { width: 100%; margin-top: 22px; }
+  .sf-contact-page .sf-contact-intro { font-size: 14px; }
+  .sf-contact-page .sf-contact-form { padding: 18px 14px; }
+  .sf-contact-page .sf-contact-fields { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .sf-contact-page .sf-contact-field--full { grid-column: auto; }
+}
+
+
+.sf-contact-page .sf-contact-privacy {font-size:12px;line-height:1.8;color:#627488;margin:0 0 14px;}
+.sf-contact-page .sf-form-status {font-size:13px;line-height:1.7;margin:12px 0 0;color:#9a3840;min-height:0;}
+.sf-contact-page .sf-contact-submit:disabled {opacity:.65;cursor:wait;}
+</style>
+</head>
+<body>
+<div class="sf-shell"> <div class="sf-topline">業務システムの設計・開発・改修・保守に対応しています。</div> <div class="sf-banner">
+<div class="sf-banner-inner">
+<div class="sf-banner-copy">
+<span class="sf-banner-title">SystemFinal</span>
+<span class="sf-banner-subtitle">システムファイナル</span>
+</div>
+<svg aria-hidden="true" class="sf-banner-waves" focusable="false" preserveaspectratio="none" viewbox="0 0 720 90">
+<path d="M0 100 C165 83 297 78 410 49 S608 9 720 -16 L720 90 L0 90 Z" fill="#7ec4f6" opacity=".65"></path>
+<path d="M120 100 C276 89 373 57 476 45 S644 16 720 2 L720 90 L120 90 Z" fill="#399ce3" opacity=".68"></path>
+<path d="M190 101 C352 84 455 52 575 43 S676 34 726 29" fill="none" opacity=".88" stroke="#f0f9ff" stroke-width="8"></path>
+<path d="M384 100 C506 76 584 60 720 48 L720 90 L384 90 Z" fill="#1c7dcb" opacity=".50"></path>
+</svg>
+</div>
+</div> <div class="sf-layout"> <aside class="sf-sidebar"> <nav id="menu1"> <ul> <li><a href="index.html">ＴＯＰ</a></li> <li><a href="sub1.html">事業内容</a></li> <li><a href="sub2.html">お仕事の流れ</a></li> <li><a href="sub3.html">スキル</a></li> <li><a href="sub4.html">職務経歴</a></li> <li><a href="sub5.html">プロフィール</a></li> <li><a aria-current="page" href="sub7.html">お問合せ</a></li> </ul> </nav> </aside> <main class="sf-main"> <div class="sf-card"> <header aria-labelledby="sf-section-title" class="sf-section-heading">
+<div class="sf-section-heading__text">
+<span class="sf-section-heading__en">CONTACT</span>
+<h1 class="sf-section-heading__title" id="sf-section-title">お問合せ</h1>
+<p class="sf-section-heading__lead">ご相談・ご依頼について</p>
+</div>
+<div aria-hidden="true" class="sf-section-heading__art"></div>
+</header>
+<div class="sf-contact-page">
+<p class="sf-contact-intro">システム開発、既存システムの改修・保守などに関するご相談やご依頼は、こちらのフォームからお気軽にお問い合わせください。ご相談内容がまだ具体的に決まっていない場合でも構いません。</p>
+<p class="sf-contact-note">お見積もりやメールでの簡単なご相談は、対応可能な範囲で無料で承っております。<br/>「必須」の項目をご入力のうえ、送信してください。</p>
+<p class="sf-contact-privacy">ご入力いただいた情報は、お問い合わせ内容の確認と返信のために使用します。送信処理には外部サービスのFormspreeを利用しています。</p><form action="https://formspree.io/f/mvzbzlzz" class="sf-contact-form" method="POST">
+<input name="subject" type="hidden" value="SystemFinal お問い合わせ"/>
+
+<input aria-hidden="true" autocomplete="off" hidden="" name="_gotcha" tabindex="-1" type="text"/>
+<div class="sf-contact-fields">
+<div class="sf-contact-field">
+<label for="sf-contact-name">お名前 <span class="sf-contact-required">必須</span></label>
+<input autocomplete="name" id="sf-contact-name" name="name" required="" type="text"/>
+</div>
+<div class="sf-contact-field">
+<label for="sf-contact-company">会社名 <span class="sf-contact-optional">任意</span></label>
+<input autocomplete="organization" id="sf-contact-company" name="OfficeName" type="text"/>
+</div>
+<div class="sf-contact-field sf-contact-field--full">
+<label for="sf-contact-email">メールアドレス <span class="sf-contact-required">必須</span></label>
+<input autocomplete="email" id="sf-contact-email" name="email" required="" type="email"/>
+</div>
+<div class="sf-contact-field sf-contact-field--full">
+<label for="sf-contact-url">ホームページURL <span class="sf-contact-optional">任意</span></label>
+<input id="sf-contact-url" inputmode="url" name="HP_URL" placeholder="https://example.com" type="text"/>
+</div>
+<div class="sf-contact-field sf-contact-field--full">
+<label for="sf-contact-message">お問い合わせ内容 <span class="sf-contact-required">必須</span></label>
+<textarea id="sf-contact-message" name="comment" placeholder="ご相談内容やシステムの概要、希望する作業などをご記入ください。" required="" rows="7"></textarea>
+<span class="sf-contact-help">システムの概要・開発環境・ご希望の納期など、分かる範囲でお知らせください。</span>
+</div>
+</div>
+<div class="sf-contact-actions">
+<button class="sf-contact-submit" type="submit">入力内容を送信</button>
+<button class="sf-contact-reset" type="reset">入力内容をクリア</button>
+</div>
+<p aria-live="polite" class="sf-form-status" id="sf-form-status" role="status"></p></form>
+</div>
+</div> </main> </div> <div class="sf-footer">© 2026 SystemFinal. All rights reserved.</div>
+</div>
+<script>// Formspreeへ送信成功時だけ自サイトの完了ページへ移動します。
+// JavaScript無効時は通常のフォームPOSTが動作します。
+(() => {
+  const form = document.querySelector('.sf-contact-form');
+  if (!form) return;
+  const submit = form.querySelector('[type="submit"]');
+  const status = document.getElementById('sf-form-status');
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity() || submit.disabled) return;
+    submit.disabled = true;
+    status.textContent = '送信しています…';
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (!response.ok) {
+        throw new Error('Formspree returned HTTP ' + response.status);
+      }
+      window.location.assign(new URL('thanks.html', window.location.href).href);
+    } catch (error) {
+      status.textContent = '送信できませんでした。通信状況をご確認のうえ、再度お試しください。';
+      submit.disabled = false;
+    }
+  });
+})();</script></body>
+</html>

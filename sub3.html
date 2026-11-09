@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="favicon.ico" rel="icon"/>
+<title>スキル・開発技術 | システムファイナル</title>
+<meta content="C#/.NET、ASP.NET、Python、Vue.js、Azure、AWS、SQL Server、Oracleなど、これまで経験した開発技術をご紹介します。" name="description"/>
+
+<link href="style.css" rel="stylesheet"/>
+<link href="section-headers.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+
+/* スキルページ専用：ほかのページの表示には影響しません */
+.sf-skills-page {
+  width: 92%;
+  max-width: 760px;
+  min-width: 0;
+  margin: 24px auto 34px;
+  color: #273647;
+}
+.sf-skills-page .sf-skills-intro {
+  margin: 0 0 26px;
+  line-height: 1.95;
+  font-size: 15px;
+}
+.sf-skills-page .sf-skills-section {
+  margin: 24px 0 0;
+  padding: 22px 0 0;
+  border-top: 1px solid #e5eaf0;
+}
+.sf-skills-page .sf-skills-section:first-of-type {
+  margin-top: 0;
+}
+.sf-skills-page .sf-skills-section-title {
+  margin: 0 0 14px;
+  padding-left: 12px;
+  border-left: 3px solid #708aa4;
+  color: #2b455e;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.sf-skills-page .sf-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.sf-skills-page .sf-skills-tile {
+  background: #f7f9fb;
+  border: 1px solid #e5ebf1;
+  border-radius: 10px;
+  padding: 15px 17px;
+  min-width: 0;
+}
+.sf-skills-page .sf-skills-tile h3 {
+  margin: 0 0 8px;
+  color: #36546e;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.sf-skills-page .sf-skills-tile p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+.sf-skills-page .sf-skills-rows {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+.sf-skills-page .sf-skills-row {
+  display: grid;
+  grid-template-columns: minmax(0, 160px) minmax(0, 1fr);
+  gap: 14px;
+  border-bottom: 1px solid #edf1f5;
+  padding: 7px 0 12px;
+}
+.sf-skills-page .sf-skills-row dt {
+  font-size: 14px;
+  font-weight: 600;
+  color: #36546e;
+}
+.sf-skills-page .sf-skills-row dd {
+  min-width: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+.sf-skills-page .sf-skills-note {
+  margin: 20px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+@media (max-width: 600px) {
+  .sf-skills-page { width: 100%; margin-top: 22px; }
+  .sf-skills-page .sf-skills-intro { font-size: 14px; }
+  .sf-skills-page .sf-skills-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .sf-skills-page .sf-skills-tile { padding: 13px 14px; }
+  .sf-skills-page .sf-skills-row { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
+</style>
+</head>
+<body>
+<div class="sf-shell"> <div class="sf-topline">業務システムの設計・開発・改修・保守に対応しています。</div> <div class="sf-banner">
+<div class="sf-banner-inner">
+<div class="sf-banner-copy">
+<span class="sf-banner-title">SystemFinal</span>
+<span class="sf-banner-subtitle">システムファイナル</span>
+</div>
+<svg aria-hidden="true" class="sf-banner-waves" focusable="false" preserveaspectratio="none" viewbox="0 0 720 90">
+<path d="M0 100 C165 83 297 78 410 49 S608 9 720 -16 L720 90 L0 90 Z" fill="#7ec4f6" opacity=".65"></path>
+<path d="M120 100 C276 89 373 57 476 45 S644 16 720 2 L720 90 L120 90 Z" fill="#399ce3" opacity=".68"></path>
+<path d="M190 101 C352 84 455 52 575 43 S676 34 726 29" fill="none" opacity=".88" stroke="#f0f9ff" stroke-width="8"></path>
+<path d="M384 100 C506 76 584 60 720 48 L720 90 L384 90 Z" fill="#1c7dcb" opacity=".50"></path>
+</svg>
+</div>
+</div> <div class="sf-layout"> <aside class="sf-sidebar"> <nav id="menu1"> <ul> <li><a href="index.html">ＴＯＰ</a></li> <li><a href="sub1.html">事業内容</a></li> <li><a href="sub2.html">お仕事の流れ</a></li> <li><a aria-current="page" href="sub3.html">スキル</a></li> <li><a href="sub4.html">職務経歴</a></li> <li><a href="sub5.html">プロフィール</a></li> <li><a href="sub7.html">お問合せ</a></li> </ul> </nav> </aside> <main class="sf-main"> <div class="sf-card"> <header aria-labelledby="sf-section-title" class="sf-section-heading">
+<div class="sf-section-heading__text">
+<span class="sf-section-heading__en">SKILLS</span>
+<h1 class="sf-section-heading__title" id="sf-section-title">スキル</h1>
+<p class="sf-section-heading__lead">技術・開発環境について</p>
+</div>
+<div aria-hidden="true" class="sf-section-heading__art"></div>
+</header>
+<div class="sf-skills-page">
+<p class="sf-skills-intro">C#／.NETを中心に、業務アプリケーションやWebシステムの開発・改修・保守に携わってきました。<br/>
+  以下は、<a href="sub4.html">職務経歴</a>に掲載している案件で使用した技術を中心に、これまでの経験を分野ごとに整理したものです。</p>
+<section aria-labelledby="sf-skills-main-title" class="sf-skills-section">
+<h2 class="sf-skills-section-title" id="sf-skills-main-title">主な開発技術</h2>
+<div class="sf-skills-grid">
+<div class="sf-skills-tile">
+<h3>C#・.NET／業務アプリケーション</h3>
+<p>C#、.NET 8／10、ASP.NET、WPF、Worker Service、.NET MAUI</p>
+</div>
+<div class="sf-skills-tile">
+<h3>Webシステム・API</h3>
+<p>Python、Django REST Framework、JavaScript、TypeScript、Vue.js、Node.js／Express、HTML／CSS、Bootstrap</p>
+</div>
+<div class="sf-skills-tile">
+<h3>データベース</h3>
+<p>SQL Server、Oracle、MySQL、PostgreSQL、SQLite、Microsoft Access</p>
+</div>
+<div class="sf-skills-tile">
+<h3>クラウド・開発基盤</h3>
+<p>Azure Functions、Azure DevOps、Azure、AWS、Docker、Git、GitHub</p>
+</div>
+</div>
+</section>
+<section aria-labelledby="sf-skills-other-title" class="sf-skills-section">
+<h2 class="sf-skills-section-title" id="sf-skills-other-title">その他の技術経験</h2>
+<dl class="sf-skills-rows">
+<div class="sf-skills-row"><dt>言語・スクリプト</dt><dd>VB.NET、Visual Basic（VB4／5／6）、VBA（Access・Excel）、PowerShell、Transact-SQL、Oracle PL/SQL、Perl、UNIX C、VAX C、Lattice C、COBOL</dd></div>
+<div class="sf-skills-row"><dt>フレームワーク・製品</dt><dd>IFS Cloud／IFS 10、IFS Developer Studio、Vuetify、SPREAD、IIS</dd></div>
+<div class="sf-skills-row"><dt>開発・テストツール</dt><dd>Visual Studio、Visual Studio Code、NUnit、xUnit、E2Eテスト、NLog、TFS、SVN、Jira、Backlog</dd></div>
+<div class="sf-skills-row"><dt>OS・実行環境</dt><dd>Windows、Linux、Solaris、HP-UX、VMS、MS-DOS など</dd></div>
+</dl>
+</section>
+<section aria-labelledby="sf-skills-industry-title" class="sf-skills-section">
+<h2 class="sf-skills-section-title" id="sf-skills-industry-title">経験した業務分野</h2>
+<dl class="sf-skills-rows">
+<div class="sf-skills-row"><dt>金融・保険</dt><dd>証券、銀行、損害保険、生命保険</dd></div>
+<div class="sf-skills-row"><dt>製造・設備・物流</dt><dd>自動車・自動車部品、タイヤ、機械、太陽電池、金型、空調、自動倉庫・設備制御</dd></div>
+<div class="sf-skills-row"><dt>流通・サービス</dt><dd>ネットスーパー、ホテル・宿泊管理、婚礼・宴会、小売・販売管理</dd></div>
+<div class="sf-skills-row"><dt>公共・その他</dt><dd>官公庁、建設、出版・印刷・製本、不動産、通信、高速道路 など</dd></div>
+</dl>
+</section>
+<section aria-labelledby="sf-skills-development-title" class="sf-skills-section">
+<h2 class="sf-skills-section-title" id="sf-skills-development-title">開発について</h2>
+<p class="sf-skills-intro">WindowsやLinux環境で、Visual StudioやVisual Studio Codeなどを利用した開発経験があります。既存システムの機能追加・改修から、データベースを利用したシステムやクラウド環境での開発まで、案件に応じた技術を用いて対応しています。</p>
+<p class="sf-skills-note">※ 記載した技術には、過去の案件で使用したものも含まれます。具体的な開発実績は<a href="sub4.html">職務経歴</a>をご覧ください。</p>
+</section>
+</div>
+</div> </main> </div> <div class="sf-footer">© 2026 SystemFinal. All rights reserved.</div>
+</div>
+</body>
+</html>

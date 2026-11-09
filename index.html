@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="favicon.ico" rel="icon"/>
+<title>システムファイナル | 業務システムの設計・開発・保守</title>
+<meta content="業務システムの設計・開発・改修・保守に対応。C#/.NET、Web、データベースなどの開発経験をご紹介します。" name="description"/>
+
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+/* トップページの紹介エリア（上部バナー／メニューのCSSには影響しません） */
+/* 旧テーブルの3列による幅の潰れを防ぐ、トップ専用のコンテナ */
+.sf-top-promo-wrap {
+  width: 92%;
+  max-width: 760px;
+  min-width: 0;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .sf-top-promo-wrap { width: 100%; }
+}
+.sf-promo {
+  width: 100%;
+  min-height: 270px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 27%;
+  overflow: hidden;
+  border: 1px solid #e1e7ed;
+  border-radius: 12px;
+  background: #f8fafc;
+  text-align: left;
+  color: #26384d;
+}
+.sf-promo-content {
+  min-width: 0;
+  padding: 27px 29px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sf-promo-kicker {
+  color: #8293a6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  line-height: 1.4;
+}
+.sf-promo h1 {
+  margin: 13px 0 12px;
+  font-size: clamp(21px, 2.25vw, 28px);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: .015em;
+  color: #243952;
+}
+.sf-promo-text {
+  margin: 0;
+  color: #63778b;
+  font-size: 13px;
+  line-height: 1.85;
+}
+.sf-promo-tags {
+  margin-top: 18px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sf-promo-tags span {
+  color: #50677d;
+  background: #e6edf3;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font: 500 11px/1.35 system-ui, sans-serif;
+}
+.sf-promo-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #eef2f5;
+}
+.sf-promo-circles {
+  width: min(100%, 220px);
+  height: auto;
+  aspect-ratio: 1;
+}
+@media (max-width: 700px) {
+  .sf-promo { grid-template-columns: minmax(0, 1fr) 25%; }
+  .sf-promo-content { padding: 22px 19px; }
+  .sf-promo h1 { font-size: 21px; }
+  .sf-promo-text { font-size: 12px; }
+  .sf-promo-desktop-break { display: none; }
+}
+@media (max-width: 480px) {
+  .sf-promo { grid-template-columns: 1fr; min-height: 0; }
+  .sf-promo-visual { display: none; }
+  .sf-promo-content { padding: 22px 18px; }
+  .sf-promo h1 { font-size: 20px; }
+}
+
+
+/* トップページの本文：他ページと同じ読みやすい幅・余白 */
+.sf-home-greeting {
+  width: 92%;
+  max-width: 760px;
+  margin: 30px auto 28px;
+  padding: 0;
+  min-width: 0;
+  color: #2c3b4d;
+  font-size: 15px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+.sf-home-greeting h2 {
+  margin: 0 0 17px;
+  color: #2b455e;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.6;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #e8eef3;
+}
+.sf-home-greeting p { margin: 0 0 17px; }
+.sf-home-greeting a { color:#285e92; text-underline-offset:3px; }
+.sf-home-greeting__signature { text-align:right; margin-top: 6px !important; }
+@media (max-width: 600px) {
+  .sf-home-greeting { width:100%; margin-top:24px; font-size:14px; }
+  .sf-home-greeting h2 { font-size:18px; }
+}
+</style>
+</head>
+<body>
+<div class="sf-shell"> <div class="sf-topline">業務システムの設計・開発・改修・保守に対応しています。</div> <div class="sf-banner">
+<div class="sf-banner-inner">
+<div class="sf-banner-copy">
+<span class="sf-banner-title">SystemFinal</span>
+<span class="sf-banner-subtitle">システムファイナル</span>
+</div>
+<svg aria-hidden="true" class="sf-banner-waves" focusable="false" preserveaspectratio="none" viewbox="0 0 720 90">
+<path d="M0 100 C165 83 297 78 410 49 S608 9 720 -16 L720 90 L0 90 Z" fill="#7ec4f6" opacity=".65"></path>
+<path d="M120 100 C276 89 373 57 476 45 S644 16 720 2 L720 90 L120 90 Z" fill="#399ce3" opacity=".68"></path>
+<path d="M190 101 C352 84 455 52 575 43 S676 34 726 29" fill="none" opacity=".88" stroke="#f0f9ff" stroke-width="8"></path>
+<path d="M384 100 C506 76 584 60 720 48 L720 90 L384 90 Z" fill="#1c7dcb" opacity=".50"></path>
+</svg>
+</div>
+</div> <div class="sf-layout"> <aside class="sf-sidebar"> <nav id="menu1"> <ul> <li><a aria-current="page" href="index.html">ＴＯＰ</a></li> <li><a href="sub1.html">事業内容</a></li> <li><a href="sub2.html">お仕事の流れ</a></li> <li><a href="sub3.html">スキル</a></li> <li><a href="sub4.html">職務経歴</a></li> <li><a href="sub5.html">プロフィール</a></li> <li><a href="sub7.html">お問合せ</a></li> </ul> </nav> </aside> <main class="sf-main"> <div class="sf-card"><div class="sf-top-promo-wrap"> <div aria-labelledby="sf-promo-heading" class="sf-promo">
+<div class="sf-promo-content">
+<div class="sf-promo-kicker">SOFTWARE ENGINEERING</div>
+<h1 id="sf-promo-heading">業務に合ったシステムを、<br/>設計から運用まで。</h1>
+<p class="sf-promo-text">業務システムの新規開発から、既存システムの改修・保守まで。<br class="sf-promo-desktop-break"/>長年の開発経験を活かして対応します。</p>
+<div aria-label="対応技術" class="sf-promo-tags">
+<span>C# / .NET</span>
+<span>Azure</span>
+<span>Database</span>
+</div>
+</div>
+<div aria-hidden="true" class="sf-promo-visual">
+<svg class="sf-promo-circles" focusable="false" viewbox="0 0 180 180">
+<circle cx="98" cy="85" fill="none" r="71" stroke="#c5d2de" stroke-width="1.4"></circle>
+<circle cx="98" cy="85" fill="none" r="48" stroke="#b9cbd9" stroke-width="1.4"></circle>
+<circle cx="98" cy="85" fill="#e1e9f0" r="23"></circle>
+<path d="M12 164 L169 13" stroke="#cfdae4" stroke-width="1.4"></path>
+</svg>
+</div>
+</div> </div><section aria-labelledby="sf-home-greeting-title" class="sf-home-greeting">
+<h2 id="sf-home-greeting-title">ごあいさつ</h2>
+<p>システムファイナルでは、お客様の業務がより円滑に進むよう、品質と使いやすさを大切にしたシステムの設計・開発に取り組んでいます。</p>
+<p>フリーランスならではの小回りの利く対応を強みとし、作業規模や納期、ご予算など、ご要望に応じてできる限り柔軟に対応いたします。</p>
+<p>小さな改修からシステム開発に関するご相談まで、お気軽にお問い合わせください。</p>
+<p>また、お見積もりやメールによる簡単なご相談は、対応可能な範囲で無料で承っております。</p>
+<p>詳しい業務内容やこれまでの開発実績は、「<a href="sub1.html">事業内容</a>」「<a href="sub4.html">職務経歴</a>」のページに掲載しておりますので、ぜひご覧ください。</p>
+<p>どうぞよろしくお願いいたします。</p>
+<p class="sf-home-greeting__signature">田村</p>
+</section></div> </main> </div> <div class="sf-footer">© 2026 SystemFinal. All rights reserved.</div>
+</div>
+</body>
+</html>
